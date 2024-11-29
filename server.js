@@ -4,14 +4,18 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 
 import recipeRoutes from './routes/recipeRoutes.js';
+import authRoutes from './routes/authRoutes.js';
 
-dotenv.config();
+dotenv.config(); // Load environment variables
 
-const app = express();
+const app = express(); // Initialize Express app
 const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(bodyParser.json());
+
+// Add authentication routes
+app.use('/api/auth', authRoutes);
 
 // Routes
 app.use('/api', recipeRoutes);
