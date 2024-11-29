@@ -23,10 +23,10 @@ export const loginUser = async(req, res) => {
     try {
         const { email, password } = req.body;
 
-        if (!email || !password) {
-            return res.status(400).json({ error: 'All fields are required' });
-        }
-
+       
+    if (!email || !password) {
+        return res.status(400).json({ error: "All fields are required" });
+    }
         const user = await User.findOne({ email });
         if (!user || !(await user.comparePassword(password))) {
             return res.status(401).json({ error: 'Invalid credentials' });

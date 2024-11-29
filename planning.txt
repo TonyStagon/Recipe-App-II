@@ -56,3 +56,17 @@ Search and Filters: Implement search functionality to filter recipes based on ke
 Categories and Tags: Enable categorization of recipes, such as vegan, desserts, or quick meals.
 File Uploads: Allow users to upload recipe images.
 Pagination: Introduce pagination for large datasets to improve performance.
+
+
+-----------------------------------------------------------------
+http://localhost:6000/api/auth/register
+
+http://localhost:6000/api/auth/login
+
+
+http://localhost:6000/api/recipes?page=1&limit=10
+
+http://localhost:6000/api/recipes/<recipe_id>
+
+http://localhost:6000/api/auth/register
+
